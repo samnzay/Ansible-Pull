@@ -1,0 +1,9 @@
+---
+- hosts: localhost # run this playbook against localhost
+  connection: local # set connection to local, so it does not default ssh.
+  become: true
+
+  tasks:
+    - name: Install htop
+      apt:
+        name: htop
