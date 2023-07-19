@@ -6,4 +6,4 @@ Using Ansible "Pull" Mode to Dynamically Automate Server/Workstation Builds.
 - Allows Servers/workstations to `pull` ansible playbooks from a Git server, and run them locally.
 
 - No need to maintain a server, `no single point of failure`.
-- Leverages thefunctinality of Git to extend Ansible.
+- Leverages the functionality of Git to extend Ansible.
