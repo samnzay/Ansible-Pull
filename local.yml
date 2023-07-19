@@ -3,10 +3,11 @@
   connection: local # set connection to local, so it does not default ssh.
   become: true
 
-  tasks:
-    - name: Install packages
+  pre_tasks:
+    - name: update repositories
       apt:
-        name: 
-          - htop
-          - mc
-          - tmux
+        update_cache: yes
+      changed_when: F alse
+  
+  tasks:
+    - include: tasks/packages.yml
