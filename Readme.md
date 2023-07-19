@@ -69,3 +69,36 @@ We want to create a user to all our systems for ansible that will allow to run a
 
 #### Step 2: Create Ansible Cron Job
 - Create ansible cron jobs to all target systems.
+
+#### Step 2: Run Ansible pull To Target systems
+- Run Ansible Pull To all Target systems.
+
+```shell
+sudo ansible-pull -U https://github.com/samnzay/Ansible-Pull.git
+```
+
+#### Step 3: Verify the latest changes
+- Verify the latest changes has been made to all every single target server.
+- In all your target servers terminal, run:
+```shell
+ls -l /home
+```
+
+The recently created ansible user will be there.
+
+```shell
+cat /etc/passwd
+```
+Ansible user should be there added to the end.
+
+-  Check Crontab for ansible user to all target systems
+```shell
+sudo crontab -u ansible -l
+```
+The Cron job that Ansible added should be listed there.
+
+## Conclusion
+
+That is all we needed to do to get our ansible runs automatatically.
+We can go ahead and make changes into our repository, push to Github repo, and all our target servers will obey our instructions to pull changes by themselves and run them to apply changes locally.
+
