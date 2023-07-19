@@ -66,3 +66,6 @@ We want to create a user to all our systems for ansible that will allow to run a
 
 #### Step 1: Create Ansible User all Target Systems
 - Create User with ansible to all target systems.
+
+#### Step 2: Create Ansible Cron Job
+- Create ansible cron jobs to all target systems.
