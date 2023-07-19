@@ -29,10 +29,34 @@ Expected result
 ```/usr/bin/ansible-pull```
 #### Step 2: Setup a Git Repository
 - Setup a git repository either private or public.
-- Clone it into your workstation
-- Change the working directory to that cloned folder
+- Clone it into your workstation.
+- Change the working directory to that cloned folder.
 
-#### Step 2: Create Ansible playbook
-- Inside the previously cloned repository
+#### Step 3: Create Ansible playbook
+- Inside the previously cloned repository.
 - Create an ansible playbook, use your favorite text editor. Ansible-pull expects a playbook named `local.yml`.
+
+- Add instructions to that file.
+- Push changes into the Git remote repository `Github` or `Gitlab`.
+
+#### Step 4: Install Ansible to all Target Servers.
+- Update the packages repository for `Debian` or `Ubuntu` systems.
+```shell
+sudo apt update
+```
+- Install ansible 
+```shell
+sudo apt install ansible
+```
+- Again, verify ansible-pull
+```shell
+which ansible-pull
+```
+
+#### Step 5: Run Ansible-Pull to all Target Servers.
+- Inside all target servers, run the Ansible pull command, to pull ansible playbooks from Github repo.
+```shell
+sudo ansible-pull -U https://github.com/samnzay/Ansible-Pull.git
+```
+>**Warning**: Remember to change your repository url accordingly.
 
