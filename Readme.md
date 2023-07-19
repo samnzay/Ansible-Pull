@@ -60,3 +60,9 @@ sudo ansible-pull -U https://github.com/samnzay/Ansible-Pull.git
 ```
 >**Warning**: Remember to change your repository url accordingly.
 
+### Ansible Pull Automation
+
+We want to create a user to all our systems for ansible that will allow to run ansible jobs in the background.
+
+#### Step 1: Create Ansible User all Target Systems
+- Create User with ansible to all target systems.
